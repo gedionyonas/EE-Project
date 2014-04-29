@@ -11,11 +11,6 @@
 int channel_1 = A0; // scope channels
 int channel_2 = A1;
 
-#include <ToggleSwitch.h>
-
-int channel_1 = A0; // scope channels
-int channel_2 = A1;
-
 int vertical = 5; //sensitivity controls
 int horizontal = 6;
 
