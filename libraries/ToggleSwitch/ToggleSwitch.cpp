@@ -5,10 +5,11 @@ ToggleSwitch :: ToggleSwitch(int in_pin){
     pin = in_pin;
     previous = LOW;     //previous reading from input
     time = 0;          // last time for successful toggle
-    debounce = 200;     //minimum delay to debounce switch
+    debounce = 300;     //minimum delay to debounce switch
     state = LOW;        //state for the circuit controlled by switch
                    
     pinMode(pin,INPUT);
+    digitalWrite(pin,LOW);
      
 }
 

@@ -11,8 +11,8 @@
 int channel_1 = A0; // scope channels
 int channel_2 = A1;
 
-int vertical = 5; //sensitivity controls
-int horizontal = 6;
+int vertical = A2; //sensitivity controls
+int horizontal = A3;
 
 //toggle switches
 ToggleSwitch ch1_toggle(13);  //turns channel 1 on and off
@@ -39,19 +39,19 @@ void broadcast(){
   //print state of all pins in one line separated by 
   //spaces
   
-  Serial.print(analogRead(channel_1));
+  Serial.print(analogRead(channel_1),10);
   Serial.print(" ");
-  Serial.print(analogRead(channel_2));
+  Serial.print(analogRead(channel_2),10);
   Serial.print(" ");
-  Serial.print(analogRead(vertical));
+  Serial.print(analogRead(vertical),10);
   Serial.print(" ");
-  Serial.print(analogRead(horizontal));
+  Serial.print(analogRead(horizontal),10);
   Serial.print(" ");
-  Serial.print(ch1_toggle.read_state());
+  Serial.print(ch1_toggle.read_state(),10);
   Serial.print(" ");
-  Serial.print(ch2_toggle.read_state());
+  Serial.print(ch2_toggle.read_state(),10);
   Serial.print(" ");
-  Serial.print(trigger.read_state());
+  Serial.print(trigger.read_state(),10);
   Serial.print("\n");
   
 }
